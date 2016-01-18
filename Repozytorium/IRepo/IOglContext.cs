@@ -16,17 +16,14 @@ namespace Repozytorium.IRepo
         DbSet<Uzytkownik> Uzytkownik { get; set; }
         DbSet<Ogloszenie_Kategoria> Ogloszenie_Kategoria { get; set; }
         DbSet<Atrybut> Atrybut { get; set; }
-<<<<<<< HEAD
+
         DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
         DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
         DbSet<Zdjecie> Zdjecia { get; set; }
 
-=======
 
-        DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
->>>>>>> origin/master
 
-        DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+  
 
 
         DbSet<OgloszenieAtrybutWartosc> OgloszenieAtrybutWartosc { get; set; }

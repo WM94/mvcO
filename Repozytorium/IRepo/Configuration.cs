@@ -42,19 +42,19 @@
             //SeeedRoles(context);
             // SeedUsers(context);
             // SeedOgloszenia(context);
-<<<<<<< HEAD
+
            //SeedKategorie(context);
            ///// SeedOgloszenie_Kategoria(context);
            //SeedAtrybut(context);
            // SeedAtrybutWartosc(context);
            // SeedKategoriaAtrybut(context);
-=======
+
             ///////SeedKategorie(context);
             //SeedOgloszenie_Kategoria(context);
             SeedAtrybut(context);
             SeedAtrybutWartosc(context);
             SeedKategoriaAtrybut(context);
->>>>>>> origin/master
+
         }
 
         private void SeedUsers(Models.OglContext context)
@@ -92,7 +92,7 @@
 
 
         }
-<<<<<<< HEAD
+
          //AddOrUpdate nie bedzie duplikowac danych przy kazdym wywolaniu metody Seed()
         //private void SeedOgloszenia(Models.OglContext context)
         //{
@@ -334,7 +334,7 @@
         //    context.Set<AtrybutWartosc>().AddOrUpdate(kat3);
         //    context.SaveChanges();
         //}
-=======
+
         //AddOrUpdate nie bedzie duplikowac danych przy kazdym wywolaniu metody Seed()
         private void SeedOgloszenia(Models.OglContext context)
         {
@@ -610,7 +610,7 @@
             context.SaveChanges();
 
         }
->>>>>>> origin/master
+
 
 
 
