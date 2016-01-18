@@ -14,7 +14,7 @@ namespace Repozytorium.Repo
 
         public KategoriaRepo(IOglContext db)
         {
-        _db = db;
+            _db = db;
         }
 
         public IQueryable<Kategoria> PobierzKategorie()

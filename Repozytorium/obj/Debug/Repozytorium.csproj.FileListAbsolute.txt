@@ -89,6 +89,7 @@ C:\se\OGL\Repozytorium\bin\System.Web.WebPages.Razor.xml
 C:\se\OGL\Repozytorium\obj\Debug\Repozytorium.pdb
 C:\se\OGL\Repozytorium\obj\Debug\Repozytorium.Migrations.dodanieAtrybutoq.resources
 C:\se\OGL\Repozytorium\obj\Debug\Repozytorium.Migrations.poprawa.resources
+<<<<<<< HEAD
 C:\Users\szymo\Desktop\mvcO\Repozytorium\bin\Repozytorium.dll.config
 C:\Users\szymo\Desktop\mvcO\Repozytorium\bin\Repozytorium.dll
 C:\Users\szymo\Desktop\mvcO\Repozytorium\bin\Repozytorium.pdb
@@ -121,3 +122,38 @@ C:\Users\szymo\Desktop\mvcO\Repozytorium\obj\Debug\Repozytorium.Migrations.popra
 C:\Users\szymo\Desktop\mvcO\Repozytorium\obj\Debug\Repozytorium.csproj.GenerateResource.Cache
 C:\Users\szymo\Desktop\mvcO\Repozytorium\obj\Debug\Repozytorium.dll
 C:\Users\szymo\Desktop\mvcO\Repozytorium\obj\Debug\Repozytorium.pdb
+=======
+C:\m\Repozytorium\obj\Debug\Repozytorium.csprojResolveAssemblyReference.cache
+C:\m\Repozytorium\obj\Debug\Repozytorium.Migrations.startowa.resources
+C:\m\Repozytorium\obj\Debug\Repozytorium.Migrations._1.resources
+C:\m\Repozytorium\obj\Debug\Repozytorium.Migrations.dodanieAtrybutoq.resources
+C:\m\Repozytorium\obj\Debug\Repozytorium.Migrations.poprawa.resources
+C:\m\Repozytorium\obj\Debug\Repozytorium.csproj.GenerateResource.Cache
+C:\m\Repozytorium\obj\Debug\Repozytorium.dll
+C:\m\Repozytorium\obj\Debug\Repozytorium.pdb
+C:\m\Repozytorium\bin\Repozytorium.dll.config
+C:\m\Repozytorium\bin\Repozytorium.dll
+C:\m\Repozytorium\bin\Repozytorium.pdb
+C:\m\Repozytorium\bin\EntityFramework.dll
+C:\m\Repozytorium\bin\EntityFramework.SqlServer.dll
+C:\m\Repozytorium\bin\Microsoft.AspNet.Identity.Core.dll
+C:\m\Repozytorium\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\m\Repozytorium\bin\Microsoft.Web.Infrastructure.dll
+C:\m\Repozytorium\bin\System.Web.Helpers.dll
+C:\m\Repozytorium\bin\System.Web.Mvc.dll
+C:\m\Repozytorium\bin\System.Web.Razor.dll
+C:\m\Repozytorium\bin\System.Web.WebPages.Deployment.dll
+C:\m\Repozytorium\bin\System.Web.WebPages.dll
+C:\m\Repozytorium\bin\System.Web.WebPages.Razor.dll
+C:\m\Repozytorium\bin\EntityFramework.xml
+C:\m\Repozytorium\bin\EntityFramework.SqlServer.xml
+C:\m\Repozytorium\bin\Microsoft.AspNet.Identity.Core.xml
+C:\m\Repozytorium\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\m\Repozytorium\bin\System.Web.Helpers.xml
+C:\m\Repozytorium\bin\System.Web.Mvc.xml
+C:\m\Repozytorium\bin\System.Web.Razor.xml
+C:\m\Repozytorium\bin\System.Web.WebPages.xml
+C:\m\Repozytorium\bin\System.Web.WebPages.Deployment.xml
+C:\m\Repozytorium\bin\System.Web.WebPages.Razor.xml
+C:\m\Repozytorium\obj\Debug\Repozytorium.Migrations.dodanieatr.resources
+>>>>>>> origin/master

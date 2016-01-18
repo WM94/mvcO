@@ -31,8 +31,12 @@ namespace Repozytorium.Models
         public DbSet<Atrybut> Atrybut { get; set; }
         public DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
         public DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+<<<<<<< HEAD
         public DbSet<Zdjecie> Zdjecia { get; set; }
 
+=======
+        public DbSet<OgloszenieAtrybutWartosc> OgloszenieAtrybutWartosc { get; set; }
+>>>>>>> origin/master
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
