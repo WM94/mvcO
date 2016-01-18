@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Repozytorium.IRepo
 {
@@ -52,6 +53,7 @@ namespace Repozytorium.IRepo
 
         IQueryable<Atrybut> PobierzAtrybutyZKategorii(int id);
         IQueryable<AtrybutWartosc> PobierzWartosciAtrybutowZAtrybutu(int id);
+        IEnumerable<SelectListItem> PobierzWartosciAtrybutowZAtrybutuJakoSelect(int id);
 
 
         /// <summary>
@@ -65,5 +67,8 @@ namespace Repozytorium.IRepo
         /// </summary>
         /// <param name="ogloszenie"></param>
         void Aktualizuj(Ogloszenie ogloszenie);
+
+
+        void dodajAtrybutyZWartosciami(List<Models.View.AtrybutZWartosciami> model);
     }
 }

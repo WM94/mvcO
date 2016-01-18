@@ -128,10 +128,11 @@ namespace OGL.Controllers
             return null;
         }
 
+
         public ActionResult WypelnijAtrybuty(string category, string tytul, string nazwa)
         {
             List<AtrybutZWartosciami> model = new List<AtrybutZWartosciami>();
-
+            AtrybutZWartosciami temp = null;
             string[] _category = category.Split(',');
             foreach (var item2 in _category)
             {
@@ -140,17 +141,34 @@ namespace OGL.Controllers
 
                 foreach (var item in atrybuty)
                 {
-                    AtrybutZWartosciami temp = new AtrybutZWartosciami();
+                    temp = new AtrybutZWartosciami();
                     temp.atrybut = item;
 
                     temp.atrybutWartosc = _repo.PobierzWartosciAtrybutowZAtrybutu(item.Id);
+                    ///temp.list = new SelectList(temp.atrybutWartosc, "c");
+                    ///
+                    temp.list = _repo.PobierzWartosciAtrybutowZAtrybutuJakoSelect(item.Id);
                     model.Add(temp);
+
 
                 }
             }
 
             return View(model);
         }
+
+        [HttpPost]
+        public ActionResult DodajAtrybuty(List<Repozytorium.Models.View.AtrybutZWartosciami> model)
+        {
+
+            _repo.dodajAtrybutyZWartosciami(model);
+
+            return null;
+        }
+
+
+
+
 
         #region MetodyDodawaniaUsuwaniaITP
 

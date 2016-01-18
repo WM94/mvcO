@@ -10,20 +10,22 @@ namespace Repozytorium.IRepo
 {
     public interface IOglContext
     {
-        
-         DbSet<Kategoria> Kategorie { get; set; }
-         DbSet<Ogloszenie> Ogloszenia { get; set; }
-         DbSet<Uzytkownik> Uzytkownik { get; set; }
-         DbSet<Ogloszenie_Kategoria> Ogloszenie_Kategoria { get; set; }
-          DbSet<Atrybut> Atrybut { get; set; }
 
-         DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
+        DbSet<Kategoria> Kategorie { get; set; }
+        DbSet<Ogloszenie> Ogloszenia { get; set; }
+        DbSet<Uzytkownik> Uzytkownik { get; set; }
+        DbSet<Ogloszenie_Kategoria> Ogloszenie_Kategoria { get; set; }
+        DbSet<Atrybut> Atrybut { get; set; }
 
-         DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+        DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
 
+        DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+
+
+        DbSet<OgloszenieAtrybutWartosc> OgloszenieAtrybutWartosc { get; set; }
         int SaveChanges();
         Database Database { get; }
         DbEntityEntry Entry(object entity);
-        
+
     }
 }

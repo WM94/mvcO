@@ -14,8 +14,8 @@
         {
             AutomaticMigrationsEnabled = true;
             AutomaticMigrationDataLossAllowed = true;
-            
-            
+
+
         }
 
         protected override void Seed(Repozytorium.Models.OglContext context)
@@ -42,9 +42,9 @@
             //SeeedRoles(context);
             // SeedUsers(context);
             // SeedOgloszenia(context);
-           SeedKategorie(context);
-           /// SeedOgloszenie_Kategoria(context);
-           SeedAtrybut(context);
+            ///////SeedKategorie(context);
+            //SeedOgloszenie_Kategoria(context);
+            SeedAtrybut(context);
             SeedAtrybutWartosc(context);
             SeedKategoriaAtrybut(context);
         }
@@ -55,38 +55,43 @@
             var manager = new UserManager<Uzytkownik>(store);
             if (!context.Users.Any(u => u.UserName == "Administrator"))
             {
-                var user = new Uzytkownik { UserName = "Admin@asp.pl", Wiek=21 };
+                var user = new Uzytkownik { UserName = "Admin@asp.pl", Wiek = 21 };
                 var adminresult = manager.Create(user, "12345678");
                 if (adminresult.Succeeded)
                 {
                     manager.AddToRole(user.Id, "Admin");
                 }
             }
-            if(!context.Users.Any(u=>u.UserName=="Marek")){
-                var user = new Uzytkownik {UserName="marek@asp.pl"};
-                var adminresult = manager.Create(user,"1234Abc");
-                if(adminresult.Succeeded){
+            if (!context.Users.Any(u => u.UserName == "Marek"))
+            {
+                var user = new Uzytkownik { UserName = "marek@asp.pl" };
+                var adminresult = manager.Create(user, "1234Abc");
+                if (adminresult.Succeeded)
+                {
                     manager.AddToRole(user.Id, "Pracownik");
                 }
 
             }
-            if(!context.Users.Any(u=>u.UserName=="Prezes")){
-                var user = new Uzytkownik {UserName="prezes@asp.pl"};
-                var adminresult = manager.Create(user,"1234Abc");
-                if(adminresult.Succeeded){
+            if (!context.Users.Any(u => u.UserName == "Prezes"))
+            {
+                var user = new Uzytkownik { UserName = "prezes@asp.pl" };
+                var adminresult = manager.Create(user, "1234Abc");
+                if (adminresult.Succeeded)
+                {
                     manager.AddToRole(user.Id, "Admin");
                 }
             }
 
 
         }
-         //AddOrUpdate nie bedzie duplikowac danych przy kazdym wywolaniu metody Seed()
+        //AddOrUpdate nie bedzie duplikowac danych przy kazdym wywolaniu metody Seed()
         private void SeedOgloszenia(Models.OglContext context)
         {
             var idUzytkownika = context.Set<Uzytkownik>().Where(u => u.UserName == "Admin").FirstOrDefault().Id;
             for (int i = 1; i < 10; i++)
             {
-                var ogl = new Ogloszenie(){
+                var ogl = new Ogloszenie()
+                {
                     Id = i,
                     UzytkownikId = idUzytkownika,
                     Tresc = "Treść ogłoszenia" + i.ToString(),
@@ -95,7 +100,7 @@
                 };
                 context.Set<Ogloszenie>().AddOrUpdate(ogl);
             }
-            context.SaveChanges();            
+            context.SaveChanges();
         }
 
         private void SeedKategorie(Models.OglContext context)
@@ -320,6 +325,39 @@
             };
             context.Set<AtrybutWartosc>().AddOrUpdate(kat3);
             context.SaveChanges();
+
+            var kat4 = new AtrybutWartosc()
+            {
+                IdAtrybut = 1,
+                Wartosc = "S"
+            };
+
+            var kat5 = new AtrybutWartosc()
+            {
+                IdAtrybut = 1,
+                Wartosc = "M"
+            };
+
+            var kat6 = new AtrybutWartosc()
+            {
+                IdAtrybut = 1,
+                Wartosc = "XL"
+            };
+
+
+            context.AtrybutWartosc.AddOrUpdate(kat4);
+            context.AtrybutWartosc.AddOrUpdate(kat5);
+            context.AtrybutWartosc.AddOrUpdate(kat6);
+
+
+            context.Kategoria_Atrybut.AddOrUpdate(new Kategoria_Atrybut()
+              {
+                  IdKategoria = 5,
+                  IdAtrybut = 1
+              });
+
+            context.SaveChanges();
+
         }
 
 

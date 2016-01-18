@@ -33,6 +33,10 @@
             </div>
         </div>
 
+        <br />
+        <br />
+        <br />
+
         <div class="form-group" id="category">
             <ol id="category-list"></ol>
 
@@ -89,8 +93,7 @@
 
             };
 
-            if (_category.length == 0)
-            {
+            if (_category.length == 0) {
                 alert("Wybierz przynajmniej jedną kategorię");
                 return;
             }
@@ -102,12 +105,12 @@
                 type: "POST",
                 contentType: 'application/json',
                 url: "/Ogloszenie/DodajOgloszenie",
-                enctype:"multipart/form-data",
-                data: JSON.stringify({ advert :_advert,category:_category }),
+                enctype: "multipart/form-data",
+                data: JSON.stringify({ advert: _advert, category: _category }),
                 success: function (result) {
                     debugger
 
-                    var url="@Url.Action("WypelnijAtrybuty", "Ogloszenie")";
+                    var url = "@Url.Action("WypelnijAtrybuty", "Ogloszenie")";
 
                     window.location.href = url + "?category=" + _category;//this will call you action method and pass you parameter.
 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc;
 
 namespace Repozytorium.Repo
 {
@@ -101,6 +102,9 @@ namespace Repozytorium.Repo
         public IQueryable<Atrybut> PobierzAtrybutyZKategorii(int id)
         {
 
+       
+
+
             var test1 = (from o in _db.Kategoria_Atrybut
                          select o).ToList();
 
@@ -121,6 +125,8 @@ namespace Repozytorium.Repo
         public IQueryable<AtrybutWartosc> PobierzWartosciAtrybutowZAtrybutu(int id)
         {
 
+
+
             var atrW = from o in _db.Atrybut
                        join k in _db.AtrybutWartosc on o.Id equals k.IdAtrybut
                        where o.Id == id
@@ -130,5 +136,27 @@ namespace Repozytorium.Repo
 
 
 
+
+
+        public IEnumerable<System.Web.Mvc.SelectListItem> PobierzWartosciAtrybutowZAtrybutuJakoSelect(int id)
+        {
+            var atrW = from o in _db.Atrybut
+                       join k in _db.AtrybutWartosc on o.Id equals k.IdAtrybut
+                       where o.Id == id
+                       select k;
+
+            var list = atrW.Select(m => new SelectListItem { Value = m.Id.ToString(), Text = m.Wartosc });
+            return list;
+        }
+
+
+        public void dodajAtrybutyZWartosciami(List<Models.View.AtrybutZWartosciami> model)
+        {
+            foreach (var item in model)
+            {
+
+
+            }
+        }
     }
 }

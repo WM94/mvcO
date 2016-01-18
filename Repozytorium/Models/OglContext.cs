@@ -33,6 +33,7 @@ namespace Repozytorium.Models
         public DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
 
         public DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+        public DbSet<OgloszenieAtrybutWartosc> OgloszenieAtrybutWartosc { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

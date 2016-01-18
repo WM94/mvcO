@@ -129,12 +129,17 @@
     <Compile Include="Migrations\201601181631064_poprawa.Designer.cs">
       <DependentUpon>201601181631064_poprawa.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201601182106259_dodanieatr.cs" />
+    <Compile Include="Migrations\201601182106259_dodanieatr.Designer.cs">
+      <DependentUpon>201601182106259_dodanieatr.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\Atrybut.cs" />
     <Compile Include="Models\AtrybutWartosc.cs" />
     <Compile Include="Models\Kategoria.cs" />
     <Compile Include="Models\Kategoria_Atrybut.cs" />
     <Compile Include="Models\OglContext.cs" />
     <Compile Include="Models\Ogloszenie.cs" />
+    <Compile Include="Models\OgloszenieAtrybutWartosc.cs" />
     <Compile Include="Models\Ogloszenie_Kategoria.cs" />
     <Compile Include="Models\Uzytkownik.cs" />
     <Compile Include="Models\View\AccountViewModels.cs" />
@@ -156,6 +161,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201601181631064_poprawa.resx">
       <DependentUpon>201601181631064_poprawa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201601182106259_dodanieatr.resx">
+      <DependentUpon>201601182106259_dodanieatr.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
