@@ -51,6 +51,7 @@ namespace OGL.App_Start
             // zadania kontener IoC automatycznie wywola metode Dispose() zwolnienie zasobow
             container.RegisterType<IOglContext, OglContext>(new PerRequestLifetimeManager());
             container.RegisterType<IKategoriaRepo, KategoriaRepo>(new PerRequestLifetimeManager());
+            container.RegisterType<IZdjecieRepo, ZdjecieRepo>(new PerRequestLifetimeManager());
         }
     }
 }

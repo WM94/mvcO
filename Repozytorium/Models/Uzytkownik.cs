@@ -19,6 +19,7 @@ namespace Repozytorium.Models
             public Uzytkownik()
             {
                 this.Ogloszenia = new HashSet<Ogloszenie>();
+                this.Zdjecia = new HashSet<Zdjecie>();
             }
             // Klucz podstawowy odziedziczony po klasie IdentityUser
             // Pola Imie i Nazwisko
@@ -39,6 +40,7 @@ namespace Repozytorium.Models
 
             public virtual ICollection<Ogloszenie>
                 Ogloszenia { get; private set; }
+            public virtual ICollection<Zdjecie> Zdjecia { get; set; }
 
             public async Task<ClaimsIdentity>
                 GenerateUserIdentityAsync(UserManager<Uzytkownik> manager)

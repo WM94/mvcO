@@ -29,10 +29,10 @@ namespace Repozytorium.Models
         public DbSet<Uzytkownik> Uzytkownik { get; set; }
         public DbSet<Ogloszenie_Kategoria> Ogloszenie_Kategoria { get; set; }
         public DbSet<Atrybut> Atrybut { get; set; }
-
         public DbSet<AtrybutWartosc> AtrybutWartosc { get; set; }
-
         public DbSet<Kategoria_Atrybut> Kategoria_Atrybut { get; set; }
+        public DbSet<Zdjecie> Zdjecia { get; set; }
+
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
